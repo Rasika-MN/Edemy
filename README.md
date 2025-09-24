@@ -1,4 +1,133 @@
-Edemy LMS
+
+<div align="center">
+  
+![favicon](https://github.com/user-attachments/assets/ba86af86-a98e-4842-9cc4-5871c5ef234b)
+
+</div>
+
+# Edemy LMS 🎓 - A Modern Learning Management System
+
+
+Edemy LMS is a full-stack learning management system (LMS) that provides educators and students with a seamless e-learning experience. Built using modern web technologies, it includes user authentication, course management, video streaming, and progress tracking.
+
+## 🚀 Tech Stack
+
+### Frontend:
+- **React** (via Vite) ⚡
+- **React Router DOM** for navigation
+- **React Toastify** for notifications
+- **Framer Motion** for animations
+- **Quill** for rich text editing
+- **Axios** for API requests
+- **RC Progress** for progress tracking
+- **React YouTube** for video embedding
+- **Clerk Authentication** for user management
+
+### Backend:
+- **Node.js** & **Express.js** 🚀
+- **MongoDB** & **Mongoose** for database
+- **Cloudinary** for media storage
+- **Multer** for file uploads
+- **Stripe** for payment processing
+- **Cors** for cross-origin requests
+- **Dotenv** for environment variables
+- **Nodemon** for development
+
+---
+
+## 📂 Project Structure
+
+### **Frontend (`client/`)**
+```
+📦 client
+ ├── 📂 src
+ │   ├── 📂 assets
+ │   ├── 📂 components
+ │   │   ├── 📂 educator
+ │   │   │   ├── Footer.jsx
+ │   │   │   ├── Navbar.jsx
+ │   │   │   ├── Sidebar.jsx
+ │   │   ├── 📂 student
+ │   │   │   ├── Logger.jsx
+ │   ├── 📂 context
+ │   │   ├── AppContext.jsx
+ │   ├── 📂 pages
+ │   │   ├── 📂 educator
+ │   │   │   ├── AddCourse.jsx
+ │   │   │   ├── Dashboard.jsx
+ │   │   │   ├── Educator.jsx
+ │   │   │   ├── MyCourses.jsx
+ │   │   │   ├── StudentsEnrolled.jsx
+ │   │   ├── 📂 student
+ │   │   │   ├── CourseDetails.jsx
+ │   │   │   ├── CoursesList.jsx
+ │   │   │   ├── Home.jsx
+ │   │   │   ├── MyEnrollMents.jsx
+ │   │   │   ├── Player.jsx
+ │   │   ├── App.jsx
+ │   │   ├── index.css
+ │   │   ├── main.jsx
+ ├── 📜 .env
+ ├── 📜 .gitignore
+ ├── 📜 package.json
+ ├── 📜 tailwind.config.js
+ ├── 📜 vite.config.js
+
+```
+
+### **Backend (`server/`)**
+```
+📦 server
+ ├── 📂 configs
+ │   ├── cloudinary.js
+ │   ├── mongodb.js
+ │   ├── multer.js
+ ├── 📂 controllers
+ │   ├── courseController.js
+ │   ├── educatorController.js
+ │   ├── userController.js
+ │   ├── webhooks.js
+ ├── 📂 middlewares
+ │   ├── authMiddleware.js
+ ├── 📂 models
+ │   ├── Course.js
+ │   ├── CourseProgress.js
+ │   ├── Purchase.js
+ │   ├── User.js
+ ├── 📂 routes
+ │   ├── courseRoute.js
+ │   ├── educatorRoutes.js
+ │   ├── userRoutes.js
+ ├── 📜 .env
+ ├── 📜 .gitignore
+ ├── 📜 package.json
+ ├── 📜 server.js
+ ├── 📜 vercel.json
+```
+
+---
+
+## 🌟 Features
+
+✅ **User Authentication** (Signup, Login, Clerk Integration)  
+✅ **Course Management** (Add, Edit, Delete, Enroll)  
+✅ **Video Streaming** (Embedded YouTube player)  
+✅ **Progress Tracking** (Course Completion)  
+✅ **Educator Dashboard** (Monitor students)  
+✅ **Secure Payments** (Stripe integration)  
+✅ **Responsive Design** (Mobile-friendly UI)  
+
+---
+
+## 📸 Screenshots
+
+| Page | Screenshot |
+|------|-----------|
+| **Home Page** | ![Home](https://github.com/user-attachments/assets/03cf6bd7-8c30-4817-ad49-4a8fe8000541) |
+| **Add Course** | ![Add Course](https://github.com/user-attachments/assets/ee846dba-7b14-4006-ae95-8ff76402ed8d) |
+
+
+![image](https://github.com/user-attachments/assets/6eb66c29-6a73-4f98-9c15-7625a903a109)
 
 
 
@@ -6,66 +135,75 @@ Edemy LMS
 
 
 
+## ⚡ Installation & Setup
 
-Edemy is a modern Learning Management System (LMS) designed to provide a seamless online learning experience for students and educators.
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Rasika-MN/Edemy
+cd edemy-lms
+```
 
-🚀 Features
+### 2️⃣ Install Dependencies
 
-1.User Authentication: Secure login and registration for students and instructors
-
-2.Course Management: Create, update, and manage courses effortlessly
-
-3.Video Streaming: Stream course videos directly within the platform
-
-4.Progress Tracking: Monitor student progress and course completion
-
-5.Payment Integration: Handle payments securely using Stripe
-
-6.Cloud Storage: Media storage and delivery with Cloudinary
-
-🛠️ Tech Stack
-
-1.Frontend: React, Next.js
-
-2.Backend: Node.js, Express
-
-3.Database: MongoDB
-
-4.Authentication: Clerk
-
-5.Payments: Stripe
-
-6.Media Storage: Cloudinary
-
-📦 Setup & Run
-Backend Setup
-
-1.Open the server folder in your code editor
-
-2.Configure MongoDB and obtain your MongoDB URI
-
-3.Set up Cloudinary, Clerk, and Stripe accounts
-
-4.Deploy the backend on Vercel to obtain the backend URL
-
-Client Setup
-
-1.Open the client folder in your code editor
-
-2.Install dependencies:
-
+#### Frontend:
+```bash
+cd client
 npm install
-
-
-3.Configure environment variables with the deployed backend URL
-
-4.Run the client:
-
 npm run dev
+```
+
+#### Backend:
+```bash
+cd server
+npm install
+npm start
+```
+
+### 3️⃣ Setup Environment Variables
+Create a `.env` file in both `client/` and `server/` directories and add required credentials (MongoDB, Cloudinary, Clerk, Stripe, etc.).
+
+---
+
+## 🔥 Deployment
+
+This project is set up for deployment on **Vercel**.
+
+### Deploy Backend
+```bash
+cd server
+vercel --prod
+```
+
+### Deploy Frontend
+```bash
+cd client
+vercel --prod
+```
+
+---
+
+## 🔐 License
+This project is for personal or educational use.
+
+---
+
+## 🎯 Contributors
+
+👤 **Rasika MN** – *Student Developer*  
+📧 Contact: [rasikamn11a2114@gmail.com](rasikamn11a2114@gmail.com)  
+ 
+---
 
 
-5.Deploy the client (e.g., on Vercel) after ensuring the backend is running
+## Thank you for checking out the **Edemy LMS** project! Happy coding! 😊
 
-📜 License
+---
+## ⭐ Support
+Give a ⭐ if you like this project!
 
-This project is for personal or educational use
+---
+Made with ❤️ by Rasika MN
+
+### ⭐ Show Some Love!
+
+If you like this project, don't forget to leave a **⭐ Star** on GitHub! 🚀
