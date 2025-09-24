@@ -140,7 +140,7 @@ Edemy LMS is a full-stack learning management system (LMS) that provides educato
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Rasika-MN/Edemy
-cd edemy-lms
+cd edemy
 ```
 
 ### 2️⃣ Install Dependencies
